@@ -21,6 +21,12 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from engine import NexusEngine
 from models.schemas import RawInput
 
+class IncidentRequest(BaseModel):
+    source: constr(max_length=20) = "web"
+    content: constr(min_length=3, max_length=500)
+    user_id: str
+    metadata: Dict[str, Any] = {}
+
 # MISSION MONITORING: Structured Hub
 logging.basicConfig(level=logging.INFO, format='{"timestamp": "%(asctime)s", "level": "%(levelname)s", "mission": "NEXUS", "message": "%(message)s"}')
 logger = logging.getLogger("NEXUS")
@@ -55,12 +61,6 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
-
-class IncidentRequest(BaseModel):
-    source: constr(max_length=20) = "web"
-    content: constr(min_length=3, max_length=500)
-    user_id: str
-    metadata: Dict[str, Any] = {}
 
 # PHASE 3: JWT SECURITY HANDSHAKE
 async def verify_auth(authorization: str = Header(None)):
