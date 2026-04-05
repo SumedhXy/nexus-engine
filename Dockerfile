@@ -18,5 +18,5 @@ COPY . .
 # Expose the high-fidelity port
 EXPOSE 8080
 
-# Launch the Engine with Uvicorn (Render/Cloud Run default port 8080)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Launch the Engine with Uvicorn (Render/Cloud Run dynamic port)
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
