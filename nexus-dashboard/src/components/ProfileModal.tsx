@@ -42,8 +42,14 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose, isO
   };
 
   return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl animate-in fade-in duration-300">
-      <div className="bg-slate-900 border border-slate-800 w-full max-w-md rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300">
+    <div 
+      className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl animate-in fade-in duration-300"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-slate-900 border border-slate-800 w-full max-w-md rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300"
+        onClick={e => e.stopPropagation()}
+      >
         <div className="bg-slate-800/50 p-6 flex justify-between items-center border-b border-slate-700/50">
           <div className="flex items-center gap-4">
             {user.photoURL ? (
