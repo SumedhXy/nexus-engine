@@ -1,0 +1,40 @@
+{
+  "sop_id": "SOP-MED-001",
+  "name": "Medical Emergency Response Protocol",
+  "incident_types": ["medical"],
+  "min_severity": 2,
+  "steps": [
+    {
+      "step_number": 1,
+      "action": "Assess the patient — check responsiveness, breathing, and pulse",
+      "responsible_role": "medic",
+      "constraints": ["Do not move patient if spinal injury suspected"],
+      "estimated_duration_mins": 2
+    },
+    {
+      "step_number": 2,
+      "action": "Call for emergency medical services and provide location details",
+      "responsible_role": "manager",
+      "constraints": ["Verify before broadcast — confirm address and patient condition"],
+      "estimated_duration_mins": 1
+    },
+    {
+      "step_number": 3,
+      "action": "Clear the area — secure a 3-meter perimeter around the patient",
+      "responsible_role": "security_guard",
+      "constraints": ["Allow only trained responders within perimeter"],
+      "estimated_duration_mins": 2
+    },
+    {
+      "step_number": 4,
+      "action": "Retrieve AED and first aid kit from emergency station",
+      "responsible_role": "maintenance",
+      "constraints": ["Check AED battery status before use"],
+      "estimated_duration_mins": 3
+    }
+  ],
+  "constraints": [
+    "Verify before broadcast",
+    "Do not move patient without medical guidance"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "sop_id": "SOP-FIRE-001",
+  "name": "Building Fire Response Protocol",
+  "incident_types": ["fire"],
+  "min_severity": 2,
+  "steps": [
+    {
+      "step_number": 1,
+      "action": "Activate fire alarm and notify all occupants to evacuate immediately",
+      "responsible_role": "security_guard",
+      "constraints": ["Do not use elevators during fire"],
+      "estimated_duration_mins": 2
+    },
+    {
+      "step_number": 2,
+      "action": "Clear Exit B — ensure all stairwells are accessible and free of obstruction",
+      "responsible_role": "security_guard",
+      "constraints": ["Verify exit is smoke-free before directing occupants"],
+      "estimated_duration_mins": 3
+    },
+    {
+      "step_number": 3,
+      "action": "Set up triage area at Triage Room 101 for any injured persons",
+      "responsible_role": "medic",
+      "constraints": ["Do not move severely injured persons without stabilization"],
+      "estimated_duration_mins": 5
+    },
+    {
+      "step_number": 4,
+      "action": "Shut Gas Valve at utility room B2 to prevent escalation",
+      "responsible_role": "maintenance",
+      "constraints": ["Verify gas line location on blueprint before shutting", "Do not enter if area is smoke-filled"],
+      "estimated_duration_mins": 4
+    },
+    {
+      "step_number": 5,
+      "action": "Coordinate with fire department upon arrival and provide incident briefing",
+      "responsible_role": "manager",
+      "constraints": ["Verify before broadcast — confirm fire department ETA"],
+      "estimated_duration_mins": 2
+    }
+  ],
+  "constraints": [
+    "Do not use elevators in a fire",
+    "Verify before broadcast",
+    "Do not re-enter building until all-clear from fire department"
+  ]
+}

@@ -1,0 +1,14 @@
+# Secret Mission Keys (NEVER UPLOAD THESE)
+.env
+*.env
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+
+# Node.js Hub
+node_modules/
+dist/
+build/
+.next/
+.DS_Store

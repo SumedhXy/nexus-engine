@@ -1,0 +1,40 @@
+{
+  "sop_id": "SOP-FLOOD-001",
+  "name": "Flood Emergency Response Protocol",
+  "incident_types": ["flood"],
+  "min_severity": 3,
+  "steps": [
+    {
+      "step_number": 1,
+      "action": "Evacuate all personnel from basement and ground floor areas immediately",
+      "responsible_role": "security_guard",
+      "constraints": ["Prioritize mobility-impaired persons for evacuation"],
+      "estimated_duration_mins": 5
+    },
+    {
+      "step_number": 2,
+      "action": "Shut off electrical mains in flooded zones",
+      "responsible_role": "maintenance",
+      "constraints": ["Do not enter flooded electrical rooms — isolate remotely if possible"],
+      "estimated_duration_mins": 4
+    },
+    {
+      "step_number": 3,
+      "action": "Move critical assets and documents to upper floors",
+      "responsible_role": "manager",
+      "constraints": ["Prioritize server equipment and irreplaceable records"],
+      "estimated_duration_mins": 10
+    },
+    {
+      "step_number": 4,
+      "action": "Set up medical triage point on second floor for those with water exposure injuries",
+      "responsible_role": "medic",
+      "constraints": [],
+      "estimated_duration_mins": 5
+    }
+  ],
+  "constraints": [
+    "Do not enter flooded zones without waterproof protective equipment",
+    "Verify before broadcast"
+  ]
+}
