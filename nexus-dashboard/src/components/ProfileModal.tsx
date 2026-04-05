@@ -48,7 +48,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose, isO
     >
       <div 
         className="bg-slate-900 border border-slate-800 w-full max-w-md rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300"
-        onClick={e => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-slate-800/50 p-6 flex justify-between items-center border-b border-slate-700/50">
           <div className="flex items-center gap-4">
